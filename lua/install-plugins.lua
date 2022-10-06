@@ -341,6 +341,12 @@ return require('packer').startup(function(use)
       require('plugins.indent-blankline-nvim')
     end,
   }
+  use {
+    'ktunprasert/gui-font-resize.nvim',
+    config = function()
+      require('plugins.gui-font-resize-nvim')
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
