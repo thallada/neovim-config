@@ -22,7 +22,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.tidy,
 		null_ls.builtins.formatting.taplo,
 		-- Refactoring
-		null_ls.builtins.code_actions.refactoring,
+		-- null_ls.builtins.code_actions.refactoring,
 		-- Shells
 		null_ls.builtins.diagnostics.fish,
 		-- Git
