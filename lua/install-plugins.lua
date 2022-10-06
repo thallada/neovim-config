@@ -347,6 +347,14 @@ return require('packer').startup(function(use)
       require('plugins.gui-font-resize-nvim')
     end,
   }
+  use {
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require("plugins.null-ls-nvim")
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+  }
+  use 'vim-scripts/ZoomWin'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
