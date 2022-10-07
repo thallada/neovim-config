@@ -31,6 +31,7 @@ vim.opt.mouse = 'a'
 
 -- Window decorations
 vim.opt.title = true
+vim.opt.titlestring="%{substitute(getcwd(),$HOME,'~','')} - Neovide"
 
 -- Leader
 vim.g.mapleader = ' '

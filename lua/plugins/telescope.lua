@@ -27,6 +27,7 @@ require('telescope').load_extension('env')
 require('telescope').load_extension('emoji')
 require('telescope').load_extension('ui-select')
 require('telescope').load_extension('project')
+require('telescope').load_extension('session-lens')
 
 vim.keymap.set(
   'n',
@@ -152,5 +153,11 @@ vim.keymap.set(
   'n',
   '<C-p>',
   [[<Cmd>lua require('telescope').extensions.project.project({ display_type = 'full' })<CR>]],
+  { noremap = true, silent = true }
+)
+vim.keymap.set(
+  'n',
+  '<leader>`',
+  [[<Cmd>lua require('session-lens').search_session()<CR>]],
   { noremap = true, silent = true }
 )
