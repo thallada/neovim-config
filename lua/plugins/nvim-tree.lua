@@ -27,3 +27,4 @@ local function toggle_replace()
 end
 
 vim.keymap.set('n', '-', function() toggle_replace() end, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>n', [[<Cmd>NvimTreeToggle<CR>]], { noremap = true, silent = true })
