@@ -29,3 +29,18 @@ vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]])
 
 -- vim.keymap.set('n', '<F12>', [[<Cmd>ToggleTerm<CR>]], { noremap = true, silent = true })
 -- vim.keymap.set('t', '<F12>', [[<Cmd>ToggleTerm<CR>]], { noremap = true, silent = true })
+
+-- Custom gitui terminal
+local Terminal  = require('toggleterm.terminal').Terminal
+local gitui = Terminal:new({
+	cmd = 'gitui',
+	direction = 'float',
+	hidden = true,
+})
+
+function _gitui_toggle()
+  gitui:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<leader>G", "<cmd>lua _gitui_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<leader>G", "<cmd>lua _gitui_toggle()<CR>", { noremap = true, silent = true })
