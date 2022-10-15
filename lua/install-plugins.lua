@@ -369,6 +369,12 @@ return require('packer').startup(function(use)
     end
   }
   use {
+    'Pocco81/true-zen.nvim',
+    config = function()
+      require('plugins.true-zen-nvim')
+    end
+  }
+  use {
     'folke/which-key.nvim',
     config = function()
       require('plugins.which-key-nvim')
