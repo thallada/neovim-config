@@ -76,3 +76,5 @@ vim.cmd([[set formatoptions+=wantrqlc]])
 vim.g.neovide_scroll_animation_length = 0.3 -- default: 0.3
 vim.g.neovide_cursor_animation_length = 0.06
 vim.g.neovide_cursor_trail_size = 0.2 -- default: 0.8
+
+vim.api.nvim_set_hl(0, 'OctoEditable', { bg = '#313131' })
