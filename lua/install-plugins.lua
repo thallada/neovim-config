@@ -312,6 +312,7 @@ return require('packer').startup(function(use)
       require('plugins.rust-tools-nvim')
     end,
   }
+  use 'ziglang/zig.vim'
   use {
     'akinsho/bufferline.nvim',
     tag = "v2.*",
@@ -410,6 +411,7 @@ return require('packer').startup(function(use)
       require('plugins.which-key-nvim')
     end
   }
+  use 'eandrju/cellular-automaton.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
