@@ -312,6 +312,14 @@ return require('packer').startup(function(use)
       require('plugins.rust-tools-nvim')
     end,
   }
+  use {
+    'tzachar/cmp-tabnine',
+    run = './install.sh',
+    requires = 'hrsh7th/nvim-cmp',
+    config = function()
+      require('plugins.cmp-tabnine')
+    end,
+  }
   use 'ziglang/zig.vim'
   use {
     'akinsho/bufferline.nvim',
