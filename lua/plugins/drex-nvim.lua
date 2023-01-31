@@ -2,7 +2,7 @@ local drex = require('drex')
 local elements = require('drex.elements')
 
 -- open the home directory
-vim.keymap.set('n', '~', '<CMD>Drex ~<CR>', {})
+vim.keymap.set('n', '~', '<CMD>Drex ~<CR>', { desc = "Open home [~] directory in drex" })
 -- open parent DREX buffer and focus current file
 vim.keymap.set('n', '-', function()
 	local path = vim.fn.expand('%:p')
@@ -12,7 +12,7 @@ vim.keymap.set('n', '-', function()
 		drex.open_directory_buffer(vim.fn.fnamemodify(path, ':h'))
 		elements.focus_element(0, path)
 	end
-end, {})
+end, { desc = "Open current directory in drex" })
 
 require('drex.config').configure({
 	hijack_netrw = true,

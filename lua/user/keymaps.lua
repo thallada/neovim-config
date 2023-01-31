@@ -12,9 +12,9 @@ vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
-vim.keymap.set('n', '<leader>,', ':noh<CR>', { silent = true })
+vim.keymap.set('n', '<leader>,', ':noh<CR>', { silent = true, desc = "Clear highlighting" })
 
-vim.keymap.set('n', '<leader>v', [[<Cmd>:e ~/.config/nvim/init.lua<CR>]], { silent = true })
+vim.keymap.set('n', '<leader>v', [[<Cmd>:e ~/.config/nvim/init.lua<CR>]], { silent = true, desc = "Open [V]im config" })
 
 -- URL handling (since I disabled netrw)
 -- source: https://sbulav.github.io/vim/neovim-opening-urls/

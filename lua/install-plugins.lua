@@ -34,6 +34,12 @@ return require('packer').startup(function(use)
     end,
   }
   use {
+    "folke/neodev.nvim",
+    config = function()
+      require('plugins.neodev-nvim')
+    end,
+  }
+  use {
     'hrsh7th/nvim-cmp',
     requires = {
       'hrsh7th/cmp-nvim-lsp',
