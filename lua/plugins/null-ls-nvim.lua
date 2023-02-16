@@ -76,5 +76,7 @@ null_ls.setup({
 		-- Shells
 		-- Git
 		null_ls.builtins.code_actions.gitsigns,
+		-- Plugins
+		require('typescript.extensions.null-ls.code-actions'),
 	},
 })
