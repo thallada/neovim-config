@@ -37,3 +37,5 @@ vim.keymap.set('n', '<leader>s', [[<CMD>SqlsExecuteQuery<CR>]], { noremap = fals
 vim.keymap.set('n', '<leader>S', [[<CMD>SqlsExecuteQueryVertical<CR>]], { noremap = false, silent = true, desc = "[S]qls execute query under cursor in vertical split" })
 vim.keymap.set('x', '<leader>s', [[<Plug>(sqls-execute-query)<CR>]], { noremap = false, silent = true, desc = "[S]qls execute selected query" })
 vim.keymap.set('x', '<leader>S', [[<Plug>(sqls-execute-query-vertical)<CR>]], { noremap = false, silent = true, desc = "[S]qls execute selected query in vertical split" })
+
+vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#<cr>", { desc = "Close all buffers but the current one" }) -- https://stackoverflow.com/a/42071865/516188

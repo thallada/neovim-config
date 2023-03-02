@@ -336,9 +336,10 @@ return require('packer').startup(function(use)
   use {
     'zbirenbaum/copilot-cmp',
     config = function ()
-      require('copilot_cmp').setup()
+      require('plugins.copilot-cmp')
     end
   }
+  -- use 'github/copilot.vim'
   use 'ziglang/zig.vim'
   use {
     'akinsho/bufferline.nvim',
