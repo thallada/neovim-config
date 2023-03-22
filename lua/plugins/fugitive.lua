@@ -1,6 +1,6 @@
 vim.keymap.set('n', '<leader>gx', [[<Cmd>G<CR>]], { noremap = false, silent = true, desc = "Toggle [G]it status window" })
 vim.keymap.set('n', '<leader>gs', [[<Cmd>Git<CR>]], { noremap = false, silent = true, desc = "Toggle [G]it [S]tatus window" })
-vim.keymap.set('n', '<leader>gd', [[<Cmd>Gdiffsplit<CR>]], { noremap = false, silent = true, desc = "[G]it [D]iff current file against index" })
+vim.keymap.set('n', '<leader>gfd', [[<Cmd>Gdiffsplit<CR>]], { noremap = false, silent = true, desc = "[G]it [D]iff current file against index with [F]ugitive" })
 vim.keymap.set('n', '<leader>gc', [[<Cmd>Git commit<CR>]], { noremap = false, silent = true, desc = "[G]it [C]ommit" })
 vim.keymap.set('n', '<leader>gb', [[<Cmd>Git blame -C<CR>]], { noremap = false, silent = true, desc = "[G]it [B]lame" })
 vim.keymap.set('n', '<leader>gp', [[<Cmd>Git push<CR>]], { noremap = false, silent = true, desc = "[G]it [P]ush" })
