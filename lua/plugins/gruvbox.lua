@@ -2,7 +2,12 @@ require("gruvbox").setup({
   undercurl = true,
   underline = true,
   bold = true,
-  italic = true, -- will make italic comments and special strings
+  italic = {
+    strings = true,
+    comments = true,
+    operators = false,
+    folds = true,
+  },
   strikethrough = true,
   invert_selection = false,
   invert_signs = false,
