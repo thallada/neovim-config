@@ -64,7 +64,7 @@ vim.opt.completeopt = 'menuone,noinsert,noselect'
 vim.o.shortmess = vim.o.shortmess .. 'c'
 
 -- Python
-vim.g.python3_host_prog = '/usr/bin/python3'
+vim.g.python3_host_prog = vim.fn.has('macunix') and '/opt/homebrew/bin/python3' or '/usr/bin/python3'
 
 --Shell
 vim.opt.shell = 'fish'
