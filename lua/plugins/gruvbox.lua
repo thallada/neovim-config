@@ -31,6 +31,8 @@ require("gruvbox").setup({
     GruvboxRedSign = { bg = "NONE" },
     GruvboxYellowSign = { bg = "NONE" },
     SignColumn = { bg = "NONE" },
+    Search = { fg = "#E1A416" },
+    IncSearch = { fg = "#E56700" },
   }
 })
 vim.o.background = "dark"
