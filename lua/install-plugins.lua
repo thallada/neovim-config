@@ -357,7 +357,7 @@ return require('packer').startup(function(use)
   use 'ziglang/zig.vim'
   use {
     'akinsho/bufferline.nvim',
-    tag = "v2.*",
+    tag = "v3.*",
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
       require('plugins.bufferline-nvim')
