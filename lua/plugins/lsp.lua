@@ -1,3 +1,10 @@
+require('mason').setup({
+  max_concurrent_installers = 10,
+})
+require('mason-lspconfig').setup({
+  automatic_installation = true,
+})
+
 local on_attach = require('plugins.lsp.on_attach')
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
