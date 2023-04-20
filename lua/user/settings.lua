@@ -90,6 +90,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {
+  command = 'set filetype=ruby',
+  pattern = {'Podfile', 'Fastfile', 'Matchfile', 'Pluginfile', 'Appfile', 'Deliverfile'},
+})
+
 vim.opt.fillchars:append { diff = "╱" }
 
 vim.api.nvim_command([[colorscheme gruvbox]])
