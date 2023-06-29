@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   }
   use {
     'j-hui/fidget.nvim',
+    tag = 'legacy',
     config = function()
       require('plugins.fidget-nvim')
     end,
@@ -272,14 +273,13 @@ return require('packer').startup(function(use)
     end
   }
   use {
-    'kyazdani42/nvim-tree.lua',
+    'stevearc/oil.nvim',
     requires = {
-      'kyazdani42/nvim-web-devicons',
+      'nvim-tree/nvim-web-devicons',
     },
-    tag = 'nightly',
     config = function()
-      require('plugins.nvim-tree')
-    end
+      require('plugins.oil-nvim')
+    end,
   }
   use {
     'kylechui/nvim-surround',
