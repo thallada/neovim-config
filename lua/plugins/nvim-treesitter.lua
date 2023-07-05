@@ -7,6 +7,7 @@ require('nvim-treesitter.configs').setup {
 
   highlight = {
     enable = true,
+    disable = { 'sql' }, -- since pgsql.vim is currently better at highlighting
   },
   incremental_selection = {
     enable = true,

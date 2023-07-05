@@ -456,6 +456,14 @@ return require('packer').startup(function(use)
   use 'eandrju/cellular-automaton.nvim'
   use 'nyoom-engineering/oxocarbon.nvim'
   use 'folke/tokyonight.nvim'
+  use {
+    'lifepillar/pgsql.vim',
+    ft = { 'sql' },
+    config = function()
+      require('plugins.pgsql-vim')
+    end,
+  }
+  use 'NoahTheDuke/vim-just'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
