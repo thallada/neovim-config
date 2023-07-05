@@ -464,6 +464,18 @@ return require('packer').startup(function(use)
     end,
   }
   use 'NoahTheDuke/vim-just'
+  use {
+    'yorickpeterse/nvim-pqf',
+    config = function()
+      require('plugins.nvim-pqf')
+    end,
+  }
+  use {
+    'akinsho/git-conflict.nvim',
+    config = function()
+      require('plugins.git-conflict-nvim')
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
