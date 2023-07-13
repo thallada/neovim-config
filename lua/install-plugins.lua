@@ -451,6 +451,12 @@ return require('packer').startup(function(use)
   use 'nyoom-engineering/oxocarbon.nvim'
   use 'folke/tokyonight.nvim'
   use {
+    'rebelot/kanagawa.nvim',
+    config = function()
+      require('plugins.kanagawa-nvim')
+    end,
+  }
+  use {
     'lifepillar/pgsql.vim',
     ft = { 'sql' },
     config = function()
