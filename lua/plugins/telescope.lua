@@ -140,8 +140,14 @@ vim.keymap.set(
 vim.keymap.set(
   'n',
   '<Leader>ff',
+  [[<Cmd>lua require('telescope.builtin').find_files()<CR>]],
+  { noremap = true, silent = true, desc = "[F]ind [F]iles" }
+)
+vim.keymap.set(
+  'n',
+  '<Leader>fi',
   [[<Cmd>lua require('telescope.builtin').builtin()<CR>]],
-  { noremap = true, silent = true, desc = "[F]ind telescope [F]inders" }
+  { noremap = true, silent = true, desc = "[F]ind telescope f[i]nders" }
 )
 vim.keymap.set(
   'n',
