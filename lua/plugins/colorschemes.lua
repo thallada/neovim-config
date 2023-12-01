@@ -33,4 +33,35 @@ return {
       dim_inactive = true,
     },
   },
+  {
+    "rebelot/kanagawa.nvim",
+    opts = {
+      dimInactive = true,
+    },
+  },
+  { "kdheepak/monochrome.nvim" },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      style = "night",
+      dim_inactive = true,
+    },
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {
+      flavour = "mocha",
+      dim_inactive = {
+        enabled = true,
+      },
+    },
+  },
+  {
+    -- My own colorscheme, aka. thallada/farout.nvim
+    dir = "~/farout.nvim/",
+    opts = {
+      dim_inactive = true,
+    },
+  },
 }
