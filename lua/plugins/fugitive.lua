@@ -1,11 +1,37 @@
-vim.keymap.set('n', '<leader>gx', [[<Cmd>G<CR>]], { noremap = false, silent = true, desc = "Toggle [G]it status window" })
-vim.keymap.set('n', '<leader>gs', [[<Cmd>Git<CR>]], { noremap = false, silent = true, desc = "Toggle [G]it [S]tatus window" })
-vim.keymap.set('n', '<leader>gfd', [[<Cmd>Gdiffsplit<CR>]], { noremap = false, silent = true, desc = "[G]it [D]iff current file against index with [F]ugitive" })
-vim.keymap.set('n', '<leader>gc', [[<Cmd>Git commit<CR>]], { noremap = false, silent = true, desc = "[G]it [C]ommit" })
-vim.keymap.set('n', '<leader>gb', [[<Cmd>Git blame -C<CR>]], { noremap = false, silent = true, desc = "[G]it [B]lame" })
-vim.keymap.set('n', '<leader>gp', [[<Cmd>Git push<CR>]], { noremap = false, silent = true, desc = "[G]it [P]ush" })
-vim.keymap.set('n', '<leader>gf', [[<Cmd>Git push --force<CR>]], { noremap = false, silent = true, desc = "[G]it [F]orce push" })
-vim.keymap.set('n', '<leader>gu', [[<Cmd>Git pull<CR>]], { noremap = false, silent = true, desc = "[G]it p[U]ll" })
-vim.keymap.set('n', '<leader>gh', [[<Cmd>Git diff --cached<CR>]], { noremap = false, silent = true, desc = "[G]it diff current staged changes" })
-vim.keymap.set('n', '<leader>go', [[<Cmd>GBrowse<CR>]], { noremap = false, silent = true, desc = "[B]rowse [G]it URL for fugitive object under cursor" })
-vim.keymap.set('v', '<leader>go', [[<Cmd>'<,'>GBrowse<CR>]], { noremap = false, silent = true, desc = "[B]rowse [G]it URL for selected lines" })
+return {
+  "tpope/vim-fugitive",
+  dependencies = {
+    "tpope/vim-rhubarb",
+  },
+  keys = {
+    { "<leader>gx", [[<Cmd>G<CR>]], desc = "Toggle [G]it status window" },
+    { "<leader>gs", [[<Cmd>Git<CR>]], desc = "Toggle [G]it [S]tatus window" },
+    {
+      "<leader>gfd",
+      [[<Cmd>Gdiffsplit<CR>]],
+      desc = "[G]it [D]iff current file against index with [F]ugitive",
+    },
+    { "<leader>gc", [[<Cmd>Git commit<CR>]], desc = "[G]it [C]ommit" },
+    { "<leader>gb", [[<Cmd>Git blame -C<CR>]], desc = "[G]it [B]lame" },
+    { "<leader>gp", [[<Cmd>Git push<CR>]], desc = "[G]it [P]ush" },
+    { "<leader>gf", [[<Cmd>Git push --force<CR>]], desc = "[G]it [F]orce push" },
+    { "<leader>gu", [[<Cmd>Git pull<CR>]], desc = "[G]it p[U]ll" },
+    {
+      "<leader>gh",
+      [[<Cmd>Git diff --cached<CR>]],
+      desc = "[G]it diff current staged changes",
+    },
+    {
+      "<leader>go",
+      "<cmd>GBrowse<CR>",
+      desc = "[B]rowse [G]it URL for fugitive object under cursor",
+    },
+    {
+      "<leader>go",
+      ":'<,'>GBrowse<CR>",
+      mode = "v",
+      desc = "[B]rowse [G]it URL for selected lines",
+      silent = true,
+    },
+  },
+}
