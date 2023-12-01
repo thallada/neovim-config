@@ -9,4 +9,4 @@ vim.opt.completeopt = "menu,menuone,noinsert,noselect"
 
 -- Window decorations
 vim.opt.title = true
-vim.opt.titlestring = "%{substitute(getcwd(),$HOME,'~','')} - Neovide"
+vim.opt.titlestring = "%{substitute(getcwd(),$HOME,'~','')} - Neovim"
