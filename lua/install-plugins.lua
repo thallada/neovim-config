@@ -11,6 +11,11 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+-- https://github.com/wbthomason/packer.nvim/issues/202
+require('packer').init({
+  max_jobs = 50
+})
+
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
@@ -220,7 +225,6 @@ return require('packer').startup(function(use)
       require('plugins.gruvbox')
     end,
   }
-  use { 'shaunsingh/oxocarbon.nvim', run = './install.sh' }
   use {
     'akinsho/toggleterm.nvim',
     tag = '*',
@@ -348,13 +352,12 @@ return require('packer').startup(function(use)
     end,
   }
   use {
-    "jose-elias-alvarez/null-ls.nvim",
+    'jose-elias-alvarez/null-ls.nvim',
     config = function()
-      require("plugins.null-ls-nvim")
+      require('plugins.null-ls-nvim')
     end,
-    requires = { "nvim-lua/plenary.nvim" },
+    requires = { 'nvim-lua/plenary.nvim' },
   }
-  use 'dhruvasagar/vim-zoom'
   use {
     'rmagatti/auto-session',
     config = function()
@@ -373,6 +376,19 @@ return require('packer').startup(function(use)
     config = function()
       require('plugins.true-zen-nvim')
     end
+  }
+  use {
+    'sindrets/winshift.nvim',
+    config = function()
+      require('plugins.winshift-nvim')
+    end,
+  }
+  use {
+    'NTBBloodbath/rest.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('plugins.rest-nvim')
+    end,
   }
   use {
     'folke/which-key.nvim',
