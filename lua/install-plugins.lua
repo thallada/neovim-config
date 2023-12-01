@@ -294,6 +294,19 @@ return require('packer').startup(function(use)
       require('plugins.surround-nvim')
     end,
   }
+  use {
+    'ggandor/leap.nvim',
+    requires = 'tpope/vim-repeat',
+    config = function()
+      require('plugins.leap-nvim')
+    end,
+  }
+  use {
+    'ggandor/flit.nvim',
+    config = function()
+      require('plugins.flit-nvim')
+    end,
+  }
   use 'dstein64/vim-startuptime'
   use {
     'nvim-neotest/neotest',
