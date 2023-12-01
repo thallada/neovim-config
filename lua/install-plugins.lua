@@ -368,6 +368,12 @@ return require('packer').startup(function(use)
       require('plugins.session-lens')
     end
   }
+  use {
+    'folke/which-key.nvim',
+    config = function()
+      require('plugins.which-key-nvim')
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
