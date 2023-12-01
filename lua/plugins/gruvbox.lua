@@ -13,7 +13,8 @@ require("gruvbox").setup({
   dim_inactive = true,
   transparent_mode = false,
   palette_overrides = {
-    dark1 = '#282828',
+    dark0_hard = '#131516',
+    dark1 = '#242424',
   },
   overrides = {
     Pmenu = { bg = '#222222'}
