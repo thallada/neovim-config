@@ -28,14 +28,14 @@ return {
     -- replaced with true-zen.nvim
     -- vim.keymap.set('n', [[<C-a>z]], [[<Cmd>ToggleTermToggleAll<CR>]])
     -- vim.keymap.set('t', [[<C-a>z]], [[<Cmd>tab split<CR>]])
-    { "t", "<Esc>", [[<C-\><C-n>]], { desc = "Escape terminal mode" } },
-    { "t", "<C-j>", [[<Cmd>wincmd h<CR>]], { desc = "Move focus down one window" } },
-    { "t", "<C-k>", [[<Cmd>wincmd k<CR>]], { desc = "Move focus up one window" } },
-    { "t", "<C-h>", [[<Cmd>wincmd h<CR>]], { desc = "Move focus left one window" } },
-    { "t", "<C-l>", [[<Cmd>wincmd l<CR>]], { desc = "Move focus right one window" } },
-    { "n", [[<C-\>]], [[<Cmd>ToggleTerm<CR>]] },
-    { "n", "<F12>", [[<Cmd>ToggleTerm<CR>]] },
-    { "t", "<F12>", [[<Cmd>ToggleTerm<CR>]] },
+    { "<Esc>", [[<C-\><C-n>]], mode = "t", { desc = "Escape terminal mode" } },
+    { "<C-j>", [[<Cmd>wincmd h<CR>]], mode = "t", { desc = "Move focus down one window" } },
+    { "<C-k>", [[<Cmd>wincmd k<CR>]], mode = "t", { desc = "Move focus up one window" } },
+    { "<C-h>", [[<Cmd>wincmd h<CR>]], mode = "t", { desc = "Move focus left one window" } },
+    { "<C-l>", [[<Cmd>wincmd l<CR>]], mode = "t", { desc = "Move focus right one window" } },
+    { [[<C-\>]], [[<Cmd>ToggleTerm<CR>]] },
+    { "<F12>", [[<Cmd>ToggleTerm<CR>]] },
+    { "<F12>", [[<Cmd>ToggleTerm<CR>]], mode = "t" },
     -- { "<leader>H", "<cmd>lua _clx_toggle()<CR>", { desc = "Toggle clx (console HackerNews) floating terminal" } },
     -- { "<leader>G", "<cmd>lua _gitui_toggle()<CR>", { desc = "Toggle gitui floating terminal" } },
   },
