@@ -58,7 +58,7 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.tidy,
 		-- Somehow breaks tsx syntax highlighting in new buffers... wtf???
 		-- Issue made here: https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1527
-		-- null_ls.builtins.diagnostics.todo_comments,
+		null_ls.builtins.diagnostics.todo_comments,
 		null_ls.builtins.diagnostics.tsc,
 		null_ls.builtins.diagnostics.fish,
 		null_ls.builtins.diagnostics.codespell,
