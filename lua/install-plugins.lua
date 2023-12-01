@@ -294,12 +294,6 @@ return require('packer').startup(function(use)
       require('plugins.leap-nvim')
     end,
   }
-  use {
-    'ggandor/flit.nvim',
-    config = function()
-      require('plugins.flit-nvim')
-    end,
-  }
   use 'dstein64/vim-startuptime'
   use {
     'nvim-neotest/neotest',
