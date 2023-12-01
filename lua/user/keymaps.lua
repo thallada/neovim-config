@@ -31,3 +31,9 @@ elseif vim.fn.has("unix") == 1 then
 else
   vim.keymap.set[''].gx = {[[<Cmd>lua print("Error: gx is not supported on this OS!")<CR>]]}
 end
+
+-- this is needed here since it doesn't work in plugins/sqls.lua for some reason
+vim.keymap.set('n', '<leader>s', [[<CMD>SqlsExecuteQuery<CR>]], { noremap = false, silent = true, desc = "[S]qls execute query under cursor" })
+vim.keymap.set('n', '<leader>S', [[<CMD>SqlsExecuteQueryVertical<CR>]], { noremap = false, silent = true, desc = "[S]qls execute query under cursor in vertical split" })
+vim.keymap.set('x', '<leader>s', [[<Plug>(sqls-execute-query)<CR>]], { noremap = false, silent = true, desc = "[S]qls execute selected query" })
+vim.keymap.set('x', '<leader>S', [[<Plug>(sqls-execute-query-vertical)<CR>]], { noremap = false, silent = true, desc = "[S]qls execute selected query in vertical split" })
