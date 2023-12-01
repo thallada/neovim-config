@@ -77,10 +77,10 @@ require('lspconfig')['marksman'].setup({
   on_attach = on_attach,
   flags = lsp_flags,
 })
-require('lspconfig')['sqls'].setup({
+require('lspconfig')['sqlls'].setup({
   on_attach = function(client, bufn)
     on_attach(client, bufn)
-    require('sqls').on_attach(client, bufn)
+    require('sqlls').on_attach(client, bufn)
   end,
   flags = lsp_flags,
 })

@@ -373,7 +373,6 @@ return require('packer').startup(function(use)
       require('plugins.lualine-nvim')
     end,
   }
-  use 'nanotee/sqls.nvim'
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-repeat'
   use 'tpope/vim-eunuch'
