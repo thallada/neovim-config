@@ -34,7 +34,7 @@ require('lspconfig')['jsonls'].setup({
 require('lspconfig')['eslint'].setup({
   on_attach = on_attach,
   flags = lsp_flags,
-  root_dir = require('lspconfig').util.find_git_ancestor,
+  -- root_dir = require('lspconfig').util.find_git_ancestor,
 })
 require('lspconfig')['html'].setup({
   on_attach = on_attach,
@@ -98,4 +98,14 @@ require('lspconfig')['taplo'].setup({
 require('lspconfig')['zls'].setup({
   on_attach = on_attach,
   flags = lsp_flags,
+})
+require('lspconfig')['terraformls'].setup({
+  on_attach = on_attach,
+  flags = lsp_flags,
+})
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+  pattern = {"*.tf", "*.tfvars"},
+  callback = function()
+    vim.lsp.buf.format()
+  end,
 })
