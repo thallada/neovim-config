@@ -8,11 +8,11 @@ return {
     snippet_engine = "luasnip",
   },
   keys = {
-    { "<leader>nf", "<cmd>lua require('neogen').generate()<CR>", { desc = "Generate Neogen function annotation" } },
+    { "<leader>nf", "<cmd>lua require('neogen').generate()<CR>", desc = "Generate Neogen function annotation" },
     {
       "<leader>nc",
       "<cmd>lua require('neogen').generate({ type = 'class' })<CR>",
-      { desc = "Generate Neogen class annotation" },
+      desc = "Generate Neogen class annotation",
     },
   },
 }
