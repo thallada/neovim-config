@@ -44,17 +44,17 @@ cmp.setup({
     end, { "i", "s" }),
   }),
   sources = cmp.config.sources({
+    { name = "copilot", priority = 100, group_index = 1 },
     {
       name = 'nvim_lsp_signature_help',
-      priority = 100,
-      group_index = 1,
+      priority = 90,
+      group_index = 2,
     },
     {
       name = 'nvim_lsp',
-      priority = 100,
-      group_index = 1,
+      priority = 90,
+      group_index = 2,
     },
-    { name = "copilot", group_index = 2 },
     {
       name = 'buffer',
       priority = 80,
@@ -93,7 +93,7 @@ cmp.setup({
       mode = 'symbol_text',
       maxwidth = 50,
       ellipsis_char = '…',
-      symbol_map = { Copilot = '🤖' },
+      -- symbol_map = { Copilot = '🤖' },
     })
   }
 })
