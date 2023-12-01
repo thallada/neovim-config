@@ -325,6 +325,20 @@ return require('packer').startup(function(use)
       require('plugins.typescript-nvim')
     end,
   }
+  use {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = function()
+      require('plugins.copilot')
+    end,
+  }
+  use {
+    'zbirenbaum/copilot-cmp',
+    config = function ()
+      require('copilot_cmp').setup()
+    end
+  }
   use 'ziglang/zig.vim'
   use {
     'akinsho/bufferline.nvim',
