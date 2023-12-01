@@ -7,8 +7,13 @@ return {
     { "<leader>zf", [[<Cmd>:TZFocus<CR>]], desc = "[Z]oom [N]arrow current buffer in new tab" },
     { "<leader>zm", [[<Cmd>:TZMinimalist<CR>]], desc = "[Z] Toggle minimalist nvim UI mode" },
     { "<leader>za", [[<Cmd>:TZAtaraxis<CR>]], desc = "[Z]oom [A]taraxis current buffer minimalist mode" },
+    {
+      "<C-w>z",
+      [[<Cmd>:TZFocus<CR>]],
+      mode = { "n", "t" },
+      desc = "Toggle [Z]oom current buffer in new tab",
+    },
     -- tmux memory for fullscreening nvim window
-    { [[<C-a>z]], [[<Cmd>:TZFocus<CR>]], desc = "Toggle [Z]oom current buffer in new tab" },
-    { [[<C-a>z]], [[<Cmd>:TZFocus<CR>]], mode = "t", desc = "Toggle [Z]oom current terminal buffer in new tab" },
+    { "<C-a>z", [[<Cmd>:TZFocus<CR>]], mode = { "n", "t" }, desc = "Toggle [Z]oom current buffer in new tab" },
   },
 }
