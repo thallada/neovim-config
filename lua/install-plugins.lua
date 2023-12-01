@@ -347,6 +347,14 @@ return require('packer').startup(function(use)
     end
   }
   -- use 'github/copilot.vim'
+  use { "MunifTanjim/nui.nvim" }
+  use {
+    "Bryley/neoai.nvim",
+    require = { "MunifTanjim/nui.nvim" },
+    config = function()
+      require('plugins.neoai-nvim')
+    end
+  }
   use 'ziglang/zig.vim'
   use {
     'akinsho/bufferline.nvim',
