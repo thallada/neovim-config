@@ -1,4 +1,4 @@
-local colors = require("gruvbox.palette").colors;
+local colors = require("gruvbox.palette").get_base_colors({}, "dark", "hard");
 
 function FixGruvbox()
   vim.api.nvim_set_hl(0, 'DiffviewDiffAddAsDelete', { bg = "#431313" })
