@@ -49,11 +49,6 @@ cmp.setup({
       group_index = 1,
     },
     {
-      name = 'cmp_tabnine',
-      priority = 90,
-      group_index = 2,
-    },
-    {
       name = 'buffer',
       priority = 80,
       group_index = 3,
