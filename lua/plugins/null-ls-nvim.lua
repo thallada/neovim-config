@@ -51,6 +51,7 @@ null_ls.setup({
 	sources = {
 		-- Linter
 		-- null_ls.builtins.diagnostics.eslint_d,
+		-- null_ls.builtins.diagnostics.prettierd,
 		-- null_ls.builtins.diagnostics.jsonlint,
 		null_ls.builtins.diagnostics.markdownlint,
 		null_ls.builtins.diagnostics.stylelint,

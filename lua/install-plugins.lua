@@ -117,6 +117,7 @@ return require('packer').startup(function(use)
     'weilbith/nvim-code-action-menu',
     cmd = 'CodeActionMenu',
   }
+  use 'onsails/lspkind.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
@@ -270,7 +271,7 @@ return require('packer').startup(function(use)
       'kyazdani42/nvim-web-devicons',
     },
     config = function()
-      require('octo').setup()
+      require('plugins.octo-nvim')
     end
   }
   use {
@@ -395,6 +396,12 @@ return require('packer').startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
       require('plugins.drex-nvim')
+    end,
+  }
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require('plugins.nvim-colorizer')
     end,
   }
   use {

@@ -1,4 +1,5 @@
-local cmp = require'cmp'
+local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
   experimental = { ghost_text = true },
@@ -66,6 +67,13 @@ cmp.setup({
     comparators = {
       function(...) return require('cmp_buffer'):compare_locality(...) end,
     }
+  },
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol_text',
+      maxwidth = 50,
+      ellipsis_char = '…',
+    })
   }
 })
 

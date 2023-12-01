@@ -7,3 +7,5 @@ vim.keymap.set('n', '<leader>gp', [[<Cmd>Git push<CR>]], { noremap = false, sile
 vim.keymap.set('n', '<leader>gf', [[<Cmd>Git push --force<CR>]], { noremap = false, silent = true })
 vim.keymap.set('n', '<leader>gu', [[<Cmd>Git pull<CR>]], { noremap = false, silent = true })
 vim.keymap.set('n', '<leader>gh', [[<Cmd>Git diff --cached<CR>]], { noremap = false, silent = true })
+vim.keymap.set('n', '<leader>go', [[<Cmd>Gbrowse<CR>]], { noremap = false, silent = true })
+vim.keymap.set('v', '<leader>go', [[<Cmd>Gbrowse<CR>]], { noremap = false, silent = true })
