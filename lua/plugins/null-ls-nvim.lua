@@ -52,11 +52,13 @@ null_ls.setup({
 		-- Linter
 		-- null_ls.builtins.diagnostics.eslint_d,
 		-- null_ls.builtins.diagnostics.prettierd,
-		-- null_ls.builtins.diagnostics.jsonlint,
+		null_ls.builtins.diagnostics.jsonlint,
 		null_ls.builtins.diagnostics.markdownlint,
 		null_ls.builtins.diagnostics.stylelint,
 		null_ls.builtins.diagnostics.tidy,
-		null_ls.builtins.diagnostics.todo_comments,
+		-- Somehow breaks tsx syntax highlighting in new buffers... wtf???
+		-- Issue made here: https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1527
+		-- null_ls.builtins.diagnostics.todo_comments,
 		null_ls.builtins.diagnostics.tsc,
 		null_ls.builtins.diagnostics.fish,
 		null_ls.builtins.diagnostics.codespell,
@@ -72,7 +74,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.tidy,
 		null_ls.builtins.formatting.taplo,
 		-- Refactoring
-		-- null_ls.builtins.code_actions.refactoring,
+		null_ls.builtins.code_actions.refactoring,
 		-- Shells
 		-- Git
 		null_ls.builtins.code_actions.gitsigns,
