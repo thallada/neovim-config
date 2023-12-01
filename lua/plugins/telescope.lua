@@ -29,7 +29,7 @@ return {
     {
       "<leader>8",
       function()
-        require("telescope.bultin").grep_string()
+        require("telescope.builtin").grep_string()
       end,
       desc = "Search word under cursor",
     },
