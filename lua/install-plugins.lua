@@ -23,6 +23,11 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use {
     'neovim/nvim-lspconfig',
+    requires = {
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'hrsh7th/cmp-nvim-lsp',
+    },
     config = function()
       require('plugins.lsp')
     end,
@@ -63,18 +68,6 @@ return require('packer').startup(function(use)
   use {
     'petertriho/cmp-git',
     requires = 'nvim-lua/plenary.nvim',
-  }
-  use {
-    'williamboman/mason.nvim',
-    config = function()
-      require('plugins.mason-nvim')
-    end,
-  }
-  use {
-    'williamboman/mason-lspconfig.nvim',
-    config = function()
-      require('plugins.mason-lspconfig-nvim')
-    end,
   }
   use {
     'rmagatti/goto-preview',
