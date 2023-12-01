@@ -91,3 +91,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.opt.fillchars:append { diff = "╱" }
+
+vim.api.nvim_command([[colorscheme gruvbox]])
