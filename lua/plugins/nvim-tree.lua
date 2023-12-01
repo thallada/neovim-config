@@ -1,9 +1,9 @@
 require('nvim-tree').setup({
-  hijack_netrw = true,
-  hijack_directories = {
-    enable = true,
-    auto_open = true,
-  },
+  -- hijack_netrw = true,
+  -- hijack_directories = {
+  --   enable = true,
+  --   auto_open = true,
+  -- },
   view = {
     mappings = {
       list = {
@@ -17,14 +17,15 @@ require('nvim-tree').setup({
   },
 })
 
-local function toggle_replace()
-  local view = require('nvim-tree.view')
-  if view.is_visible() then
-      view.close()
-  else
-    require('nvim-tree').open_replacing_current_buffer()
-  end
-end
+-- local function toggle_replace()
+--   local view = require('nvim-tree.view')
+--   if view.is_visible() then
+--       view.close()
+--   else
+--     require('nvim-tree').open_replacing_current_buffer()
+--   end
+-- end
 
-vim.keymap.set('n', '-', function() toggle_replace() end, { noremap = true, silent = true })
+-- swapping this out with drex.nvim instead
+-- vim.keymap.set('n', '-', function() toggle_replace() end, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>n', [[<Cmd>NvimTreeToggle<CR>]], { noremap = true, silent = true })
