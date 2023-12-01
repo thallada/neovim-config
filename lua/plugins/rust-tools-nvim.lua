@@ -16,20 +16,20 @@ rt.setup({
     capabilities = nvim_cmp_capabilities,
     on_attach = function(client, bufnr)
       lsp_on_attach(client, bufnr)
-      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+      vim.keymap.set('n', '<C-space>', rt.hover_actions.hover_actions, { buffer = bufnr })
       -- Code action groups
-      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-      vim.keymap.set("n", "<leader>rc", rt.open_cargo_toml.open_cargo_toml, { buffer = bufnr })
-      vim.keymap.set("n", "<leader>rp", rt.parent_module.parent_module, { buffer = bufnr })
-      vim.keymap.set("n", "<leader>rm", rt.expand_macro.expand_macro, { buffer = bufnr })
+      vim.keymap.set('n', '<Leader>a', rt.code_action_group.code_action_group, { buffer = bufnr })
+      vim.keymap.set('n', '<leader>rc', rt.open_cargo_toml.open_cargo_toml, { buffer = bufnr })
+      vim.keymap.set('n', '<leader>rp', rt.parent_module.parent_module, { buffer = bufnr })
+      vim.keymap.set('n', '<leader>rm', rt.expand_macro.expand_macro, { buffer = bufnr })
     end,
     settings = {
       -- to enable rust-analyzer settings visit:
       -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
-      ["rust-analyzer"] = {
+      ['rust-analyzer'] = {
         -- enable clippy on save
         checkOnSave = {
-          command = "clippy"
+          command = 'clippy'
         },
       }
     },

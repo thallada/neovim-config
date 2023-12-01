@@ -65,5 +65,13 @@ vim.o.shortmess = vim.o.shortmess .. 'c'
 -- Python
 vim.g.python3_host_prog = '/usr/bin/python3'
 
+--Shell
+vim.opt.shell = 'fish'
+
 -- Format options
 vim.cmd([[set formatoptions+=wantrqlc]])
+
+-- Neovide settings
+vim.g.neovide_scroll_animation_length = 0.3 -- default: 0.3
+vim.g.neovide_cursor_animation_length = 0.06
+vim.g.neovide_cursor_trail_size = 0.2 -- default: 0.8

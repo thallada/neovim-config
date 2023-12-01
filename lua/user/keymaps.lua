@@ -19,6 +19,12 @@ vim.keymap.set('n', '<leader>v', [[<Cmd>:e ~/.config/nvim/init.lua<CR>]], { sile
 -- URL handling (since I disabled netrw)
 -- source: https://sbulav.github.io/vim/neovim-opening-urls/
 if vim.fn.has('mac') == 1 then
+  vim.keymap.set('n', '<D-v>', '"+p')
+  vim.keymap.set('n', '<D-s-v>', '"+p')
+  vim.keymap.set('i', '<D-v>', '<C-r>*')
+  vim.keymap.set('i', '<D-s-v>', '<C-r>*')
+  vim.keymap.set('t', '<D-v>', '<C-\\><C-n>"+pi')
+  vim.keymap.set('t', '<D-s-v>', '<C-\\><C-n>"+pi')
   vim.keymap.set('', 'gx', [[<Cmd>call jobstart(['open', expand('<cfile>')], { 'detach': v:true })<CR>]], { noremap = true, silent = true })
 elseif vim.fn.has("unix") == 1 then
   vim.keymap.set('', 'gx', [[<Cmd>call jobstart(['xdg-open', expand('<cfile>')], { 'detach': v:true })<CR>]], { noremap = true, silent = true })
