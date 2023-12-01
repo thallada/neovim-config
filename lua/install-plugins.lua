@@ -354,12 +354,7 @@ return require('packer').startup(function(use)
     end,
     requires = { "nvim-lua/plenary.nvim" },
   }
-  use {
-    'nyngwang/NeoZoom.lua',
-    config = function()
-      require('plugins.neozoom')
-    end,
-  }
+  use 'dhruvasagar/vim-zoom'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
