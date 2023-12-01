@@ -436,13 +436,6 @@ return require('packer').startup(function(use)
     end,
   }
   use {
-    'theblob42/drex.nvim',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require('plugins.drex-nvim')
-    end,
-  }
-  use {
     'norcalli/nvim-colorizer.lua',
     config = function()
       require('plugins.nvim-colorizer')
