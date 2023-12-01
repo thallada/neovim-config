@@ -1,16 +1,5 @@
-local cl = vim.o.columns
-local ln = vim.o.lines
-local width = 0.8
-local height = 0.8
-
 require("toggleterm").setup({
-	direction = "horizontal",
-	float_opts = {
-		border = "curved",
-		width = math.ceil(cl * width),
-		height = math.ceil(ln * height - 4),
-		winblend = 3,
-	},
+  direction = "horizontal",
   open_mapping = [[<C-\>]],
   hide_numbers = true,
   -- shell = 'fish',
@@ -33,14 +22,19 @@ vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]])
 -- Custom gitui terminal
 local Terminal  = require('toggleterm.terminal').Terminal
 local gitui = Terminal:new({
-	cmd = 'gitui',
-	direction = 'float',
-	hidden = true,
+  cmd = 'gitui',
+  direction = 'float',
+  float_opts = {
+    border = "curved",
+    width = function() return math.ceil(vim.o.columns * 0.8) end,
+    height = function() return math.ceil(vim.o.lines * 0.8) end,
+    winblend = 3,
+  },
+  hidden = true,
 })
 
 function _gitui_toggle()
   gitui:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>G", "<cmd>lua _gitui_toggle()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<leader>G", "<cmd>lua _gitui_toggle()<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>G', '<cmd>lua _gitui_toggle()<CR>', { noremap = true, silent = true })
