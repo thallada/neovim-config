@@ -37,7 +37,7 @@ vim.opt.titlestring="%{substitute(getcwd(),$HOME,'~','')} - Neovide"
 vim.g.mapleader = ' '
 
 -- Fonts
-vim.opt.guifont = 'Hack:h9.3'
+vim.opt.guifont = 'Berkeley Mono Variable:h10'
 
 -- Swap / backup / undo
 vim.opt.undofile = true
@@ -98,3 +98,11 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {
 vim.opt.fillchars:append { diff = "╱" }
 
 vim.api.nvim_command([[colorscheme gruvbox]])
+
+vim.api.nvim_create_user_command(
+  'Browse',
+  function (opts)
+    vim.fn.system { 'open', opts.fargs[1] }
+  end,
+  { nargs = 1 }
+)

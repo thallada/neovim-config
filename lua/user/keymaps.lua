@@ -40,3 +40,5 @@ end
 -- vim.keymap.set('x', '<leader>S', [[<Plug>(sqls-execute-query-vertical)<CR>]], { noremap = false, silent = true, desc = "[S]qls execute selected query in vertical split" })
 
 vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#<cr>", { desc = "Close all buffers but the current one" }) -- https://stackoverflow.com/a/42071865/516188
+
+vim.g.neovide_input_macos_alt_is_meta = true
