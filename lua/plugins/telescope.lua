@@ -31,9 +31,9 @@ require('telescope').load_extension('session-lens')
 
 vim.keymap.set(
   'n',
-  '<leader><tab>',
+  '<leader>fgf',
   [[<Cmd>lua require('telescope.builtin').git_files({ show_untracked = true })<CR>]],
-  { noremap = true, silent = true, desc = "Find git files" }
+  { noremap = true, silent = true, desc = "[F]ind [G]it [F]iles" }
 )
 vim.keymap.set(
   'n',
@@ -136,6 +136,12 @@ vim.keymap.set(
   '<Leader>fm',
   [[<Cmd>lua require('telescope.builtin').keymaps()<CR>]],
   { noremap = true, silent = true, desc = "[F]ind key [M]appings" }
+)
+vim.keymap.set(
+  'n',
+  '<Leader><tab>',
+  [[<Cmd>lua require('telescope.builtin').find_files()<CR>]],
+  { noremap = true, silent = true, desc = "find files shortcut" }
 )
 vim.keymap.set(
   'n',
