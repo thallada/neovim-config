@@ -455,7 +455,7 @@ return require('packer').startup(function(use)
     end
   }
   use {
-    'thallada/gruvbox.nvim',
+    'ellisonleao/gruvbox.nvim',
     config = function()
       require('plugins.gruvbox')
     end,
