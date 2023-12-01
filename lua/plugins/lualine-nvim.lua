@@ -2,7 +2,7 @@ require('lualine').setup({
 	extensions = { 'drex' },
 	sections = {
 		lualine_c = {
-			require('auto-session-library').current_session_name,
+			require('auto-session.lib').current_session_name,
 			{
 				'filename',
 				file_status = true, -- displays file status (readonly status, modified status)
