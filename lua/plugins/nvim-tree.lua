@@ -28,4 +28,4 @@ require('nvim-tree').setup({
 
 -- swapping this out with drex.nvim instead
 -- vim.keymap.set('n', '-', function() toggle_replace() end, { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>n', [[<Cmd>NvimTreeToggle<CR>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>n', [[<Cmd>NvimTreeToggle<CR>]], { noremap = true, silent = true, desc = "Toggle [N]vim Tree" })

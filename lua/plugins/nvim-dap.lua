@@ -21,7 +21,7 @@ local dap = require('dap')
 --   },
 -- }
 
-vim.keymap.set('n', '<leader>b', [[<Cmd>lua require('dap').toggle_breakpoint()<CR>]])
-vim.keymap.set('n', '<leader>be', [[<Cmd>lua require('dap').set_exception_breakpoints()<CR>]])
-vim.keymap.set('n', '<leader>bc', [[<Cmd>lua require('dap').clear_breakpoints()<CR>]])
-vim.keymap.set('n', '<leader>bo', [[<Cmd>lua require('dapui').toggle()<CR>]])
+vim.keymap.set('n', '<leader>b', [[<Cmd>lua require('dap').toggle_breakpoint()<CR>]], { desc = "Toggle DAP [B]reakpoint"})
+vim.keymap.set('n', '<leader>be', [[<Cmd>lua require('dap').set_exception_breakpoints()<CR>]], { desc = "Toggle DAP [B]reak on [E]xceptions" })
+vim.keymap.set('n', '<leader>bc', [[<Cmd>lua require('dap').clear_breakpoints()<CR>]], { desc = "[C]lear DAP [B]reakpoints" })
+vim.keymap.set('n', '<leader>bo', [[<Cmd>lua require('dapui').toggle()<CR>]], { desc = "Toggle nvim dapui" })

@@ -16,12 +16,12 @@ rt.setup({
     capabilities = nvim_cmp_capabilities,
     on_attach = function(client, bufnr)
       lsp_on_attach(client, bufnr)
-      vim.keymap.set('n', '<C-space>', rt.hover_actions.hover_actions, { buffer = bufnr })
+      vim.keymap.set('n', '<C-space>', rt.hover_actions.hover_actions, { buffer = bufnr, desc = "Show hover actions under cursor" })
       -- Code action groups
-      vim.keymap.set('n', '<Leader>a', rt.code_action_group.code_action_group, { buffer = bufnr })
-      vim.keymap.set('n', '<leader>rc', rt.open_cargo_toml.open_cargo_toml, { buffer = bufnr })
-      vim.keymap.set('n', '<leader>rp', rt.parent_module.parent_module, { buffer = bufnr })
-      vim.keymap.set('n', '<leader>rm', rt.expand_macro.expand_macro, { buffer = bufnr })
+      vim.keymap.set('n', '<leader>a', rt.code_action_group.code_action_group, { buffer = bufnr, desc = "Show code actions under cursor" })
+      vim.keymap.set('n', '<leader>rc', rt.open_cargo_toml.open_cargo_toml, { buffer = bufnr, desc = "Open Cargo.toml for current project" })
+      vim.keymap.set('n', '<leader>rp', rt.parent_module.parent_module, { buffer = bufnr, desc = "Go to parent Rust module" })
+      vim.keymap.set('n', '<leader>rm', rt.expand_macro.expand_macro, { buffer = bufnr, desc = "Expand Rust macro" })
     end,
     settings = {
       -- to enable rust-analyzer settings visit:

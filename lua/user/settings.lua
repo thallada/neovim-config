@@ -78,3 +78,14 @@ vim.g.neovide_cursor_animation_length = 0.06
 vim.g.neovide_cursor_trail_size = 0.2 -- default: 0.8
 
 vim.api.nvim_set_hl(0, 'OctoEditable', { bg = '#313131' })
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
