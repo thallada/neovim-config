@@ -354,7 +354,12 @@ return require('packer').startup(function(use)
     end,
     requires = { "nvim-lua/plenary.nvim" },
   }
-  use 'vim-scripts/ZoomWin'
+  use {
+    'nyngwang/NeoZoom.lua',
+    config = function()
+      require('plugins.neozoom')
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
