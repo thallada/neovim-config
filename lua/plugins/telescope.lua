@@ -32,7 +32,7 @@ require('telescope').load_extension('session-lens')
 vim.keymap.set(
   'n',
   '<leader><tab>',
-  [[<Cmd>lua require('telescope.builtin').git_files()<CR>]],
+  [[<Cmd>lua require('telescope.builtin').git_files({ show_untracked = true })<CR>]],
   { noremap = true, silent = true }
 )
 vim.keymap.set(
