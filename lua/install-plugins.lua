@@ -226,6 +226,7 @@ return require('packer').startup(function(use)
       require('plugins.gruvbox')
     end,
   }
+  use 'NLKNguyen/papercolor-theme'
   use {
     'akinsho/toggleterm.nvim',
     tag = '*',
@@ -339,6 +340,7 @@ return require('packer').startup(function(use)
       require('plugins.lualine-nvim')
     end,
   }
+  use 'nanotee/sqls.nvim'
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-repeat'
   use 'tpope/vim-eunuch'

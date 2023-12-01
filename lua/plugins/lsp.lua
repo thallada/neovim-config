@@ -26,6 +26,7 @@ require('lspconfig')['jsonls'].setup({
 require('lspconfig')['eslint'].setup({
   on_attach = on_attach,
   flags = lsp_flags,
+  root_dir = require('lspconfig').util.find_git_ancestor,
 })
 require('lspconfig')['html'].setup({
   on_attach = on_attach,
@@ -73,7 +74,9 @@ require('lspconfig')['marksman'].setup({
   flags = lsp_flags,
 })
 require('lspconfig')['sqls'].setup({
-  on_attach = on_attach,
+  on_attach = function(client, bufn)
+    require('sqls').on_attach(client, bufn)
+  end,
   flags = lsp_flags,
 })
 require('lspconfig')['taplo'].setup({

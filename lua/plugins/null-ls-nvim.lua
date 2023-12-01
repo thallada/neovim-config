@@ -63,7 +63,7 @@ null_ls.setup({
 		-- Formatter
 		null_ls.builtins.formatting.eslint_d,
 		null_ls.builtins.formatting.markdownlint,
-		-- null_ls.builtins.formatting.prettierd,
+		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.sqlfluff.with({
 			extra_args = { "--dialect", "postgres" },
 		}),
