@@ -15,10 +15,11 @@ require('lspconfig')['pyright'].setup({
   on_attach = on_attach,
   flags = lsp_flags,
 })
-require('lspconfig')['tsserver'].setup({
-  on_attach = on_attach,
-  flags = lsp_flags,
-})
+-- Setup by typescript.nvim automatically
+-- require('lspconfig')['tsserver'].setup({
+--   on_attach = on_attach,
+--   flags = lsp_flags,
+-- })
 require('lspconfig')['jsonls'].setup({
   on_attach = on_attach,
   flags = lsp_flags,

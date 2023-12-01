@@ -320,6 +320,12 @@ return require('packer').startup(function(use)
     end,
   }
   use {
+    'jose-elias-alvarez/typescript.nvim',
+    config = function()
+      require('plugins.typescript-nvim')
+    end,
+  }
+  use {
     'tzachar/cmp-tabnine',
     run = './install.sh',
     requires = 'hrsh7th/nvim-cmp',
