@@ -26,5 +26,12 @@ return {
       end,
       desc = "Find Plugin File",
     },
+    {
+      "<leader>8",
+      function()
+        require("telescope.bultin").grep_string()
+      end,
+      desc = "Search word under cursor",
+    },
   },
 }
