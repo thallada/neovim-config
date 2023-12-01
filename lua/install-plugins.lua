@@ -355,6 +355,19 @@ return require('packer').startup(function(use)
     requires = { "nvim-lua/plenary.nvim" },
   }
   use 'dhruvasagar/vim-zoom'
+  use {
+    'rmagatti/auto-session',
+    config = function()
+      require('plugins.auto-session')
+    end
+  }
+  use {
+    'rmagatti/session-lens',
+    requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
+    config = function()
+      require('plugins.session-lens')
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
