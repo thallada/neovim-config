@@ -476,6 +476,13 @@ return require('packer').startup(function(use)
       require('plugins.git-conflict-nvim')
     end,
   }
+  use {
+    'Wansmer/treesj',
+    requires = { 'nvim-treesitter' },
+    config = function()
+      require('plugins.treesj')
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
