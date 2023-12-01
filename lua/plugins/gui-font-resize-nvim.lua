@@ -5,4 +5,4 @@ require('gui-font-resize').setup({
 
 vim.keymap.set('n', '<D-Up>', [[<Cmd>GUIFontSizeUp<CR>]], { noremap = true, silent = true, desc = "Increase font size" })
 vim.keymap.set('n', '<D-Down>', [[<Cmd>GUIFontSizeDown<CR>]], { noremap = true, silent = true, desc = "Decrease font size" })
-vim.keymap.set('n', '<D-0>', [[<Cmd>set guifont=Hack:h11 | GUIFontSizeSet<CR>]], { noremap = true, silent = true, desc = "Set font family and size to default" })
+vim.keymap.set('n', '<D-0>', [[<Cmd>set guifont=Berkeley Mono Variable:h12 | GUIFontSizeSet<CR>]], { noremap = true, silent = true, desc = "Set font family and size to default" })

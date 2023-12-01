@@ -37,7 +37,7 @@ vim.opt.titlestring="%{substitute(getcwd(),$HOME,'~','')} - Neovide"
 vim.g.mapleader = ' '
 
 -- Fonts
-vim.opt.guifont = 'Berkeley Mono Variable:h10'
+vim.opt.guifont = 'Berkeley Mono Variable:h12'
 
 -- Swap / backup / undo
 vim.opt.undofile = true
