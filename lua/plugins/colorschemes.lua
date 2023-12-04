@@ -37,6 +37,29 @@ return {
     "rebelot/kanagawa.nvim",
     opts = {
       dimInactive = true,
+      colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = "none",
+            },
+          },
+          dragon = {
+            ui = {
+              bg_dim = "#1e1d1d",
+              bg = "#12120f",
+              bg_p2 = "#282727",
+            },
+          },
+          wave = {
+            ui = {
+              bg_dim = "#20202D",
+              bg = "#181820",
+              bg_p2 = "#2A2A37",
+            },
+          },
+        },
+      },
     },
   },
   { "kdheepak/monochrome.nvim" },
@@ -56,6 +79,30 @@ return {
         enabled = true,
       },
     },
+  },
+  { "LunarVim/onedarker.nvim" },
+  {
+    "EdenEast/nightfox.nvim",
+    opts = {
+      dim_inactive = true,
+    },
+  },
+  {
+    "mcchrish/zenbones.nvim",
+    dependencies = { "rktjmp/lush.nvim" },
+    config = function()
+      local opts = {
+        lightness = "bright",
+        darkness = "stark",
+        lighten_noncurrent_window = true,
+      }
+      vim.g.zenbones = opts
+      vim.g.rosebones = opts
+      vim.g.tokyobones = opts
+      vim.g.neobones = opts
+      vim.g.duckbones = opts
+      vim.g.kanagawabones = opts
+    end,
   },
   {
     -- My own colorscheme, aka. thallada/farout.nvim
