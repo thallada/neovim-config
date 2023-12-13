@@ -1,5 +1,6 @@
 return {
   "echasnovski/mini.indentscope",
+  enabled = true,
   opts = {
     draw = {
       -- Speed up distracting animation
