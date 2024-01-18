@@ -105,6 +105,11 @@ return {
     end,
   },
   {
+    "HoNamDuong/hybrid.nvim",
+    lazy = false,
+    opts = {},
+  },
+  {
     -- My own colorscheme, aka. thallada/farout.nvim
     dir = "~/farout.nvim/",
     opts = {
