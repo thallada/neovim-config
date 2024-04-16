@@ -116,4 +116,13 @@ return {
       dim_inactive = true,
     },
   },
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "ptdewey/darkearth-nvim",
+    priority = 1000,
+  },
 }
