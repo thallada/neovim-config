@@ -14,7 +14,7 @@ return {
           path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
         },
       },
-      lualine_x = { "location" },
+      lualine_x = { "location", "overseer" },
       lualine_y = {},
       lualine_z = {},
     },
