@@ -125,4 +125,7 @@ return {
     "ptdewey/darkearth-nvim",
     priority = 1000,
   },
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+  },
 }
