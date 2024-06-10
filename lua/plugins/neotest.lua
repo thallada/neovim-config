@@ -7,7 +7,7 @@ return {
     return {
       adapters = {
         ["neotest-mocha"] = {
-          command = "docker exec -it api-app npm run test:integration --",
+          command = "npx ts-mocha --config ./test-integration/.mocharc.json -r tsconfig-paths/register -r ./test/config-mutation-setup.ts -r ./test-integration/hooks.ts",
           command_args = function(context)
             -- The context contains:
             --   results_path: The file that json results are written to
@@ -26,7 +26,7 @@ return {
               relative_path,
             }
           end,
-          env = { CI = true },
+          env = { CI = true, NODE_OPTIONS = "--trace-warnings --max-old-space-size=8192", NODE_ENV = "test" },
           cwd = function()
             return vim.fn.getcwd()
           end,
