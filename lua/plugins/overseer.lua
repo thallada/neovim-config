@@ -1,6 +1,10 @@
 return {
   "stevearc/overseer.nvim",
-  opts = {},
+  opts = {
+    task_list = {
+      direction = "left",
+    },
+  },
   keys = {
     { "<leader>o", "<cmd>OverseerToggle<CR>", desc = "Toggle Overseer Panel" },
   },
