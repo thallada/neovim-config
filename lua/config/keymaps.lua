@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>H", function()
   Util.terminal({ "clx" })
 end, { desc = "Toggle clx (console HackerNews) floating terminal" })
 
-vim.keymap.set("n", "<leader>D", function()
+vim.keymap.set("n", "<leader>dd", function()
   Util.terminal({ "lazydocker" }, { esc_esc = false, ctrl_hjkl = false })
 end, { desc = "Toggle lazydocker (console Docker Desktop) floating terminal" })
 
