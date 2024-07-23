@@ -2,7 +2,7 @@ return {
   "jackMort/ChatGPT.nvim",
   event = "VeryLazy",
   opts = {
-    api_key_cmd = "cat" .. os.getenv("HOME") .. "/.config/.openai-api-key",
+    api_key_cmd = "cat " .. os.getenv("HOME") .. "/.config/.openai-api-key",
     popup_input = {
       submit = "<C-s>",
     },
@@ -41,8 +41,8 @@ return {
       "folke/which-key.nvim",
       optional = true,
       opts = {
-        defaults = {
-          ["<leader>k"] = { name = "+ChatGPT" },
+        spec = {
+          { "<leader>k", group = "ChatGPT" },
         },
       },
     },

@@ -111,7 +111,7 @@ return {
   },
   {
     -- My own colorscheme, aka. thallada/farout.nvim
-    dir = "~/farout.nvim/",
+    "thallada/farout.nvim",
     opts = {
       dim_inactive = true,
     },
