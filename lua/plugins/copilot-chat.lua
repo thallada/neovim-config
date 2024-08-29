@@ -3,7 +3,7 @@ return {
   branch = "canary",
   keys = {
     -- disable this keymap since it conflicts with avante.nvim
-    { "<leader>aa", false },
+    { "<leader>aa", false, mode = { "n", "v" } },
     -- replace the keymap with a new one
     {
       "<leader>aA",
