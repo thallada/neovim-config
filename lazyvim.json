@@ -28,6 +28,7 @@
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.lang.zig",
     "lazyvim.plugins.extras.linting.eslint",
     "lazyvim.plugins.extras.lsp.neoconf",
     "lazyvim.plugins.extras.test.core",
@@ -37,10 +38,11 @@
     "lazyvim.plugins.extras.util.mini-hipatterns",
     "lazyvim.plugins.extras.util.octo",
     "lazyvim.plugins.extras.util.project",
+    "lazyvim.plugins.extras.util.rest",
     "lazyvim.plugins.extras.util.startuptime"
   ],
   "news": {
-    "NEWS.md": "6520"
+    "NEWS.md": "7107"
   },
   "version": 6
 }

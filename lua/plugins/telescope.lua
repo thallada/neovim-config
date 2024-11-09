@@ -34,7 +34,7 @@ return {
       desc = "Search word under cursor",
     },
     {
-      "<leader>R", -- remap clashing structural replace key map
+      "<leader>s1", -- remap clashing structural replace key map
       "<cmd>Telescope resume<cr>",
       desc = "Telescope resume",
     },
