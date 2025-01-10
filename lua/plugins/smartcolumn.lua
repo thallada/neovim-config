@@ -16,6 +16,7 @@ return {
       "Trouble",
       "fish",
       "zsh",
+      "snacks_dashboard",
     },
     colorcolumn = "120",
   },
