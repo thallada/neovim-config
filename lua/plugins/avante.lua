@@ -1,11 +1,17 @@
 return {
   "yetone/avante.nvim",
   event = "VeryLazy",
-  lazy = false,
+  version = false,
   opts = {
     provider = "copilot", -- work is paying for this so it's free for me
-    copilot = {
-      model = "claude-3.7-sonnet",
+    providers = {
+      copilot = {
+        model = "claude-sonnet-4",
+      },
+    },
+    file_selector = {
+      provider = "snacks", -- Avoid native provider issues
+      provider_opts = {},
     },
   },
   keys = {
@@ -60,12 +66,23 @@ return {
       },
     },
     {
-      -- Make sure to setup it properly if you have lazy=true
       "MeanderingProgrammer/render-markdown.nvim",
+      optional = true,
+      ft = function(_, ft)
+        vim.list_extend(ft, { "Avante" })
+      end,
+      opts = function(_, opts)
+        opts.file_types = vim.list_extend(opts.file_types or {}, { "Avante" })
+      end,
+    },
+    {
+      "folke/which-key.nvim",
+      optional = true,
       opts = {
-        file_types = { "markdown", "Avante" },
+        spec = {
+          { "<leader>a", group = "ai" },
+        },
       },
-      ft = { "markdown", "Avante" },
     },
   },
 }

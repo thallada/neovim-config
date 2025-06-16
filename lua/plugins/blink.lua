@@ -10,7 +10,8 @@ return {
         show_in_snippet = false,
       },
     },
-    keymap = { preset = "super-tab" },
+    -- This started to break and idk why
+    -- keymap = { preset = "super-tab" },
     sources = {
       -- Add 'avante' to the list
       default = { "avante", "lsp", "path", "snippets", "buffer" },
