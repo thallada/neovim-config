@@ -1,5 +1,3 @@
-local presets = require("blink.cmp.keymap.presets")
-
 return {
   "saghen/blink.cmp",
   dependencies = {
@@ -12,9 +10,15 @@ return {
         show_in_snippet = false,
       },
     },
-    -- This started to break and idk why, so doing it manually
+    -- use preset again once this is merged: https://github.com/LazyVim/LazyVim/pull/6183
     -- keymap = { preset = "super-tab" },
-    keymap = presets.get("super-tab"),
+    keymap = {
+      ["<Tab>"] = {
+        require("blink.cmp.keymap.presets").get("super-tab")["<Tab>"][1],
+        require("lazyvim.util").cmp.map({ "snippet_forward", "ai_accept" }),
+        "fallback",
+      },
+    },
     sources = {
       -- Add 'avante' to the list
       default = { "avante", "lsp", "path", "snippets", "buffer" },
