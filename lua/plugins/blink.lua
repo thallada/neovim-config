@@ -1,3 +1,5 @@
+local presets = require("blink.cmp.keymap.presets")
+
 return {
   "saghen/blink.cmp",
   dependencies = {
@@ -10,8 +12,9 @@ return {
         show_in_snippet = false,
       },
     },
-    -- This started to break and idk why
+    -- This started to break and idk why, so doing it manually
     -- keymap = { preset = "super-tab" },
+    keymap = presets.get("super-tab"),
     sources = {
       -- Add 'avante' to the list
       default = { "avante", "lsp", "path", "snippets", "buffer" },
