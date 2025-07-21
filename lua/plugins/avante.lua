@@ -16,7 +16,7 @@ return {
   },
   keys = {
     {
-      "<leader>aa",
+      "<leader>aA",
       function()
         require("avante.api").ask()
       end,
