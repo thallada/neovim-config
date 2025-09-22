@@ -7,7 +7,7 @@ return {
     return {
       adapters = {
         ["neotest-mocha"] = {
-          command = "npx ts-mocha --config ./test-integration/.mocharc.json -r tsconfig-paths/register -r ./test/config-mutation-setup.ts -r ./test-integration/hooks.ts",
+          command = "docker exec -it api-sandbox npm run test:integration",
           command_args = function(context)
             -- The context contains:
             --   results_path: The file that json results are written to

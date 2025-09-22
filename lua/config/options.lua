@@ -18,3 +18,5 @@ vim.opt.title = true
 vim.opt.titlestring = "%{substitute(getcwd(),$HOME,'~','')} - Neovim"
 
 vim.opt.fillchars:append({ diff = "╱" })
+
+vim.opt.mousescroll = "ver:6,hor:6" -- better mouse scroll in hidpi mode
