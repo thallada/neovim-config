@@ -1,6 +1,10 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
+    diagnostics = {
+      virtual_text = true,
+      virtual_lines = { current_line = true },
+    },
     servers = {
       clangd = {
         -- removing .proto from the list of filetypes since clangd doesn't seem to be able to parse them
