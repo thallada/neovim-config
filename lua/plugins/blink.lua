@@ -3,6 +3,8 @@ return {
   dependencies = {
     -- For auto-completion in the avante window
     "Kaiser-Yang/blink-cmp-avante",
+    -- For emoji selection
+    "moyiz/blink-emoji.nvim",
   },
   opts = {
     completion = {
@@ -21,13 +23,25 @@ return {
     },
     sources = {
       -- Add 'avante' to the list
-      default = { "avante", "lsp", "path", "snippets", "buffer" },
+      default = { "avante", "lsp", "path", "snippets", "buffer", "emoji" },
       providers = {
         avante = {
           module = "blink-cmp-avante",
           name = "Avante",
           opts = {
             -- options for blink-cmp-avante
+          },
+        },
+        emoji = {
+          module = "blink-emoji",
+          name = "Emoji",
+          score_offset = 15, -- Tune by preference
+          opts = {
+            insert = true, -- Insert emoji (default) or complete its name
+            ---@type string|table|fun():table
+            trigger = function()
+              return { ":" }
+            end,
           },
         },
       },
