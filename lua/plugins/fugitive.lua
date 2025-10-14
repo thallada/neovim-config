@@ -23,12 +23,12 @@ return {
     },
     {
       "<leader>go",
-      "<cmd>GBrowse<CR>",
+      "<Cmd>.GBrowse<CR>",
       desc = "[B]rowse [G]it URL for fugitive object under cursor",
     },
     {
       "<leader>go",
-      ":'<,'>GBrowse<CR>",
+      ":GBrowse<CR>",
       mode = "v",
       desc = "[B]rowse [G]it URL for selected lines",
       silent = true,
