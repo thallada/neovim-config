@@ -30,6 +30,9 @@ require("lazy").setup({
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
+  git = {
+    concurrency = 3, -- reduce concurrent git operations (default is higher)
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
