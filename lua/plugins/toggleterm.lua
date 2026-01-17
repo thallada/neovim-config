@@ -29,6 +29,7 @@ return {
     -- vim.keymap.set('n', [[<C-a>z]], [[<Cmd>ToggleTermToggleAll<CR>]])
     -- vim.keymap.set('t', [[<C-a>z]], [[<Cmd>tab split<CR>]])
     { "<Esc>", [[<C-\><C-n>]], mode = "t", desc = "Escape terminal mode" },
+    { "<Esc><Esc>", [[<Esc>]], mode = "t", desc = "Escape inside terminal" },
     -- These were replaced by smart-splits
     -- { "<C-j>", [[<Cmd>wincmd h<CR>]], mode = "t", desc = "Move focus down one window" },
     -- { "<C-h>", [[<Cmd>wincmd h<CR>]], mode = "t", desc = "Move focus left one window" },
