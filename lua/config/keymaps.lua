@@ -12,8 +12,8 @@ vim.keymap.set("n", "<leader>dd", function()
 end, { desc = "Toggle lazydocker (console Docker Desktop) floating terminal" })
 
 vim.keymap.set("n", "<leader>B", function()
-  Util.terminal({ "btm" }, { esc_esc = false, ctrl_hjkl = false })
-end, { desc = "Toggle bottom (improved console top monitor) floating terminal" })
+  Util.terminal({ "btop" }, { esc_esc = false, ctrl_hjkl = false })
+end, { desc = "Toggle btop (improved console top monitor) floating terminal" })
 
 -- Allow Cmd+V pasting on mac
 if vim.fn.has("mac") == 1 then
