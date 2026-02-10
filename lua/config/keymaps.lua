@@ -14,6 +14,11 @@ vim.keymap.set("n", "<leader>B", function()
   Snacks.terminal({ "btop" }, { esc_esc = false, ctrl_hjkl = false })
 end, { desc = "Toggle btop (improved console top monitor) floating terminal" })
 
+-- Toggle zoom/maximize current window (<C-w> is the vim window prefix, m for maximize)
+vim.keymap.set({ "n", "t" }, "<C-w>m", function()
+  Snacks.toggle.zoom():toggle()
+end, { desc = "Toggle Zoom" })
+
 -- Allow Cmd+V pasting on mac
 if vim.fn.has("mac") == 1 then
   vim.keymap.set("n", "<D-v>", '"+p')
