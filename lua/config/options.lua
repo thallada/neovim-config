@@ -20,3 +20,19 @@ vim.opt.titlestring = "%{substitute(getcwd(),$HOME,'~','')} - Neovim"
 vim.opt.fillchars:append({ diff = "╱" })
 
 vim.opt.mousescroll = "ver:6,hor:6" -- better mouse scroll in hidpi mode
+
+-- WSL2 clipboard support via win32yank
+if vim.fn.has("wsl") == 1 then
+  vim.g.clipboard = {
+    name = "win32yank-wsl",
+    copy = {
+      ["+"] = "win32yank.exe -i --crlf",
+      ["*"] = "win32yank.exe -i --crlf",
+    },
+    paste = {
+      ["+"] = "win32yank.exe -o --lf",
+      ["*"] = "win32yank.exe -o --lf",
+    },
+    cache_enabled = true,
+  }
+end
