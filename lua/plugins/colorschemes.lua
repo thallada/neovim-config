@@ -7,6 +7,7 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
+    lazy = true,
     opts = {
       contrast = "hard",
       palette_overrides = {
@@ -29,12 +30,14 @@ return {
   },
   {
     "arturgoms/moonbow.nvim",
+    lazy = true,
     opts = {
       dim_inactive = true,
     },
   },
   {
     "rebelot/kanagawa.nvim",
+    lazy = true,
     opts = {
       dimInactive = true,
       colors = {
@@ -62,9 +65,9 @@ return {
       },
     },
   },
-  { "kdheepak/monochrome.nvim" },
   {
     "folke/tokyonight.nvim",
+    lazy = true,
     opts = {
       style = "night",
       dim_inactive = true,
@@ -73,6 +76,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    lazy = true,
     opts = {
       flavour = "mocha",
       dim_inactive = {
@@ -80,15 +84,16 @@ return {
       },
     },
   },
-  { "LunarVim/onedarker.nvim" },
   {
     "EdenEast/nightfox.nvim",
+    lazy = true,
     opts = {
       dim_inactive = true,
     },
   },
   {
     "mcchrish/zenbones.nvim",
+    lazy = true,
     dependencies = { "rktjmp/lush.nvim" },
     config = function()
       local opts = {
@@ -106,26 +111,27 @@ return {
   },
   {
     "HoNamDuong/hybrid.nvim",
-    lazy = false,
+    lazy = true,
     opts = {},
   },
   {
     -- My own colorscheme, aka. thallada/farout.nvim
     "thallada/farout.nvim",
+    lazy = true,
     opts = {
       dim_inactive = true,
     },
   },
   {
     "xero/miasma.nvim",
-    lazy = false,
-    priority = 1000,
+    lazy = true,
   },
   {
     "ptdewey/darkearth-nvim",
-    priority = 1000,
+    lazy = true,
   },
   {
     "nyoom-engineering/oxocarbon.nvim",
+    lazy = true,
   },
 }
