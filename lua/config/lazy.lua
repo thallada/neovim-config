@@ -30,6 +30,7 @@ require("lazy").setup({
   },
   install = { colorscheme = { "kanagawa-dragon", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
+  rocks = { enabled = false },
   git = {
     concurrency = 3, -- reduce concurrent git operations (default is higher)
   },
