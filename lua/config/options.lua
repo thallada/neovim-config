@@ -10,7 +10,6 @@ else
   vim.opt.guifont = "Berkeley Mono Variable:h13"
 end
 
--- idk if it does anything cause I have to set it in the nvim-cmp settings too
 vim.opt.completeopt = "menu,menuone,noinsert,noselect"
 
 -- Window decorations
