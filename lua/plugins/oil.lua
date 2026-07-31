@@ -25,6 +25,6 @@ return {
   },
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
-    { "-", "<cmd>Oil<cr>", { desc = "Open parent directory in current buffer" } },
+    { "-", "<cmd>Oil<cr>", desc = "Open parent directory in current buffer" },
   },
 }
