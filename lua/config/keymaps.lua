@@ -14,6 +14,13 @@ vim.keymap.set("n", "<leader>B", function()
   Snacks.terminal({ "btop" }, { esc_esc = false, ctrl_hjkl = false })
 end, { desc = "Toggle btop (improved console top monitor) floating terminal" })
 
+local function toggle_split_terminal()
+  Snacks.terminal.toggle(nil, { win = { position = "bottom" } })
+end
+
+vim.keymap.set({ "n", "t" }, [[<C-\>]], toggle_split_terminal, { desc = "Toggle terminal split" })
+vim.keymap.set({ "n", "t" }, "<F12>", toggle_split_terminal, { desc = "Toggle terminal split" })
+
 -- Toggle zoom/maximize current window (<C-w> is the vim window prefix, m for maximize)
 vim.keymap.set({ "n", "t" }, "<C-w>m", function()
   Snacks.toggle.zoom():toggle()
