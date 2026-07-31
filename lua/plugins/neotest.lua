@@ -7,7 +7,7 @@ return {
     return {
       adapters = {
         ["neotest-mocha"] = {
-          command = "docker exec -it api-sandbox npm run test:integration",
+          command = "docker exec " .. (vim.env.NEOTEST_MOCHA_CONTAINER or "api-sandbox") .. " npm run test:integration",
           command_args = function(context)
             -- The context contains:
             --   results_path: The file that json results are written to
