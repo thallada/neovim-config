@@ -1,5 +1,5 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   lazy = true,
   event = {
@@ -13,8 +13,6 @@ return {
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",
-    "ibhagwan/fzf-lua",
   },
   opts = {
     workspaces = {
@@ -22,6 +20,9 @@ return {
         name = "notes",
         path = "~/notes",
       },
+    },
+    picker = {
+      name = "snacks.pick",
     },
   },
 }
