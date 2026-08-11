@@ -134,4 +134,13 @@ return {
     "nyoom-engineering/oxocarbon.nvim",
     lazy = true,
   },
+  {
+    "Aejkatappaja/cendre",
+    lazy = true,
+    opts = {
+      -- "hard" | "medium" | "soft", also switchable at runtime with :CendreBackground
+      background = "hard",
+      dim_inactive = true,
+    },
+  },
 }
