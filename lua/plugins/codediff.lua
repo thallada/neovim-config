@@ -83,5 +83,44 @@ return {
       group = group,
       callback = sync_animations,
     })
+
+    -- The explorer and history panels tag their text (filenames, commit subjects,
+    -- padding) with the literal `Normal` group, which carries an opaque bg. Under
+    -- a colorscheme with dim_inactive that text keeps Normal's background while
+    -- the rest of the window dims to NormalNC, so every row looks highlighted.
+    -- Remapping the group to NormalNC while the panel is unfocused makes the text
+    -- dim along with the window, the way an ordinary buffer does.
+    local panel_ft = { ["codediff-explorer"] = true, ["codediff-history"] = true }
+
+    local function sync_panel_dim()
+      local current = vim.api.nvim_get_current_win()
+      for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+        local ok, buf = pcall(vim.api.nvim_win_get_buf, win)
+        if ok and panel_ft[vim.bo[buf].filetype] then
+          local want = win ~= current and "Normal:NormalNC" or ""
+          if vim.wo[win].winhighlight ~= want then
+            vim.wo[win].winhighlight = want
+          end
+        end
+      end
+    end
+
+    -- Deferred: codediff hops windows with nvim_win_call to refresh panes, which
+    -- fires WinEnter with a window that is not the real focus. Scheduling lets
+    -- those transient switches unwind before we read the current window.
+    local function schedule_panel_dim()
+      vim.schedule(sync_panel_dim)
+    end
+
+    vim.api.nvim_create_autocmd({ "WinEnter", "WinLeave", "BufWinEnter", "TabEnter" }, {
+      group = group,
+      callback = schedule_panel_dim,
+    })
+
+    vim.api.nvim_create_autocmd("User", {
+      group = group,
+      pattern = "CodeDiffOpen",
+      callback = schedule_panel_dim,
+    })
   end,
 }
