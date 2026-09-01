@@ -17,6 +17,8 @@ return {
       "fish",
       "zsh",
       "snacks_dashboard",
+      "codediff",
+      "codediff-explorer",
     },
     colorcolumn = "120",
   },
